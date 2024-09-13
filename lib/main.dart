@@ -15,7 +15,7 @@ void main() {
           ),
           backgroundColor: const Color.fromARGB(255, 1, 44, 79),
         ),
-        body: Placeholder(),
+        body: BallPage(),
       ),
     ),
   );
@@ -40,8 +40,14 @@ class _BallPageState extends State<BallPage> {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children:[
-        
+        TextButton(
+          onPressed: () {
+            changeItUp();
+          },
+          child: Image.asset('images/ball$imgIdx.png'),
+          ),
       ],
     );
   }
